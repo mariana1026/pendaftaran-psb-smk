@@ -22,8 +22,19 @@
                     @endif
 
                 </div>
-            </div>
-        </div>
+                 <div class="panel-body">
+                        <a href="{{ url('/daftar/create') }}" class="btn btn-success btn-sm" title="Add New Daftar">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Daftar psb
+                        </a>
+                        <a href="{{ url('/personaldata') }}" class="btn btn-success btn-sm" title="Add New Daftar">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Lihat data anda
+                        </a>
+                         <a href="{{ url('/dataperingkat') }}" class="btn btn-success btn-sm" title="Add New Daftar">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Lihat peringkat
+                        </a>
+                       </div>
+               </div>
+                 
     </div>
 </div>
 @endsection

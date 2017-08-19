@@ -52,11 +52,24 @@
                             </div>
                         </div>
 
+
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Pengguna</label>
+                             <div class="col-md-6">
+                                <select class="form-control" name="is_permission" id="is_permission">
+                                    <option>--pilih hak akses--</option>
+                                    <option value="0">User</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Superadmin</option>
+                                </select>
                             </div>
                         </div>
 
