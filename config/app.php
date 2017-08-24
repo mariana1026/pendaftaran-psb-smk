@@ -180,6 +180,7 @@ return [
         Unisharp\Ckeditor\ServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        //Jrean\UserVerification\UserVerificationServiceProvider::class,
 
     ],
 
@@ -232,7 +233,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
-
+        //'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
     ],
 
 ];

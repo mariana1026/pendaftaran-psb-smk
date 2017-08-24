@@ -73,6 +73,15 @@
                             </div>
                         </div>
 
+                        @if(Session::has('alert'))
+                        <div class="alert alert-success">
+                         {{ Session::get('alert') }}
+                         @php
+                         Session::forget('alert');
+                         @endphp
+                         </div>
+                         @endif
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

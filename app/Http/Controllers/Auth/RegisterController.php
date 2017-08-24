@@ -36,7 +36,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+       $this->middleware('guest',['except' => ['getVerification', 'getVerificationError']]);
     }
 
     /**
@@ -68,5 +68,14 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'is_permission' => $data['is_permission'],
         ]);
+    }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $user = $this->create($request->all());
+        UserVerification::generate($user);
+        UserVerification::send($user, 'My Custom E-mail Subject');
+        return back()->withAlert('Register sukses, untuk verifikasi buka email anda.');
     }
 }
